@@ -14,6 +14,10 @@ config/name="some warioware game"
 run/main_scene="uid://y34uhemtjbmi"
 config/features=PackedStringArray("4.7")
 
+[autoload]
+
+Global="*uid://b4jp4001dp1v5"
+
 [display]
 
 window/stretch/mode="viewport"

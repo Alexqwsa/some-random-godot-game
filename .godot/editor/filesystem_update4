@@ -1,3 +1,4 @@
-res://scenes/title_screen.gd
-res://scenes/title_scene.tscn
-res://scenes/title_scene.gd
+res://global.gd
+res://scenes/level_scene.tscn
+res://timer_screen.gd
+res://scenes/timer_screen.gd

@@ -1,3 +1,79 @@
 [gd_scene format=3 uid="uid://cwd8gtirf0vd1"]
 
+[ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="1_c8xsp"]
+[ext_resource type="Script" uid="uid://bdlv2obg2b3cr" path="res://scenes/timer_screen.gd" id="1_fkwfp"]
+[ext_resource type="FontFile" uid="uid://cep4ntpb13yjt" path="res://assets/fonts/VCR_OSD_MONO_1.001.ttf" id="2_fkwfp"]
+[ext_resource type="Texture2D" uid="uid://p7cts42vwhsi" path="res://assets/media/canny.png" id="3_eohcs"]
+[ext_resource type="FontFile" uid="uid://c6g0q2ssmx6h6" path="res://assets/fonts/MS-UIGothic.ttf" id="4_2m3ut"]
+
 [node name="Node2D" type="Node2D" unique_id=556360669]
+script = ExtResource("1_fkwfp")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1416803865]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_c8xsp")
+expand_mode = 1
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=1884109594]
+offset_left = 519.0
+offset_top = 197.99998
+offset_right = 571.0
+offset_bottom = 312.99997
+rotation = 0.122847445
+scale = Vector2(1.3767003, 1.3414804)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_fkwfp")
+theme_override_font_sizes/normal_font_size = 84
+bbcode_enabled = true
+text = "X"
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="lives_counter" type="HBoxContainer" parent="." unique_id=2009752820]
+offset_left = 498.00006
+offset_top = 356.99997
+offset_right = 670.00006
+offset_bottom = 396.99997
+rotation = 0.12462358
+scale = Vector2(2.7991688, 2.724214)
+
+[node name="placeholder" type="TextureRect" parent="lives_counter" unique_id=1010404243]
+layout_mode = 2
+texture = ExtResource("3_eohcs")
+expand_mode = 2
+
+[node name="placeholder2" type="TextureRect" parent="lives_counter" unique_id=1357457813]
+layout_mode = 2
+texture = ExtResource("3_eohcs")
+expand_mode = 2
+
+[node name="placeholder3" type="TextureRect" parent="lives_counter" unique_id=1437958922]
+layout_mode = 2
+texture = ExtResource("3_eohcs")
+expand_mode = 2
+
+[node name="placeholder4" type="TextureRect" parent="lives_counter" unique_id=312674171]
+layout_mode = 2
+texture = ExtResource("3_eohcs")
+expand_mode = 2
+
+[node name="placeholder5" type="TextureRect" parent="lives_counter" unique_id=866212720]
+layout_mode = 2
+texture = ExtResource("3_eohcs")
+expand_mode = 2
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=728932179]
+offset_top = 542.0
+offset_right = 60.0
+offset_bottom = 600.0
+scale = Vector2(1.920001, 1.8261219)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_2m3ut")
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "0.0"
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
