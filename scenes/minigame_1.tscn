@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ckx4moiy4oda4"]
+
+[ext_resource type="Script" uid="uid://dxvv48e8425q5" path="res://scenes/minigame.gd" id="1_lmjug"]
+[ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="2_v5ebm"]
+[ext_resource type="FontFile" uid="uid://c6g0q2ssmx6h6" path="res://assets/fonts/MS-UIGothic.ttf" id="3_fa05o"]
+
+[node name="Node2D" type="Node2D" unique_id=1645418159]
+script = ExtResource("1_lmjug")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=719418124]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_v5ebm")
+expand_mode = 1
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1050785458]
+offset_top = 595.0
+offset_right = 51.0
+offset_bottom = 638.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_fa05o")
+theme_override_font_sizes/normal_font_size = 42
+bbcode_enabled = true
+text = "1.0"
+fit_content = true
+autowrap_mode = 0

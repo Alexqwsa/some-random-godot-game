@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789583973
+::res://::1789836137
 global.gd::GDScript::4441440444787131512::1789574164::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1789499396::0::1::::<><><>0<>0<><>::
 ::res://addons/::1789489997
@@ -17,8 +17,10 @@ VCR_OSD_MONO_1.001.ttf::FontFile::5086347437557247109::1789582684::1789582685::1
 ::res://assets/media/::1789577992
 canny.png::CompressedTexture2D::1119049098245448104::1789577984::1789577992::1::::<><><>0<>0<>ddff64990d44209a6962f3cbd43d39b7<>res://.godot/imported/canny.png-fd74c30b8ce654263a0a97a9049e1f09.ctex::
 white.png::CompressedTexture2D::7174542008881944188::1789492310::1789492311::1::::<><><>0<>0<>ec0acce19123e0bb180d91cd6b3d9230<>res://.godot/imported/white.png-b90efd95b2678e45c341921423fd6460.ctex::
-::res://scenes/::1789582980
-level_scene.tscn::PackedScene::6325204447291995532::1789582979::0::1::::<><><>0<>0<><>::uid://dahnwnop464c3::::res://assets/media/white.png<>uid://cep4ntpb13yjt::::res://assets/fonts/VCR_OSD_MONO_1.001.ttf<>uid://p7cts42vwhsi::::res://assets/media/canny.png<>uid://c6g0q2ssmx6h6::::res://assets/fonts/MS-UIGothic.ttf
-timer_screen.gd::GDScript::2621019380365855485::1789584560::0::1::::<>Node2D<><>0<>0<><>::
+::res://scenes/::1789751851
+level_scene.tscn::PackedScene::6325204447291995532::1789674943::0::1::::<><><>0<>0<><>::uid://dahnwnop464c3::::res://assets/media/white.png<>uid://bdlv2obg2b3cr::::res://scenes/timer_screen.gd<>uid://cep4ntpb13yjt::::res://assets/fonts/VCR_OSD_MONO_1.001.ttf<>uid://p7cts42vwhsi::::res://assets/media/canny.png<>uid://c6g0q2ssmx6h6::::res://assets/fonts/MS-UIGothic.ttf
+minigame.gd::GDScript::8818285973449632638::1789744899::0::1::::<>Node2D<><>0<>0<><>::
+minigame_1.tscn::PackedScene::5523993463242082025::1789751851::0::1::::<><><>0<>0<><>::uid://dxvv48e8425q5::::res://scenes/minigame.gd<>uid://dahnwnop464c3::::res://assets/media/white.png<>uid://c6g0q2ssmx6h6::::res://assets/fonts/MS-UIGothic.ttf
+timer_screen.gd::GDScript::2621019380365855485::1789749541::0::1::::<>Node2D<><>0<>0<><>::
 title_scene.gd::GDScript::4507535369222698602::1789499049::0::1::::<>Node2D<><>0<>0<><>::
-title_scene.tscn::PackedScene::1744131707508415772::1789499171::0::1::::<><><>0<>0<><>::uid://b5hqpjanmnkle::::res://scenes/title_scene.gd<>uid://dahnwnop464c3::::res://assets/media/white.png
+title_scene.tscn::PackedScene::1744131707508415772::1789666800::0::1::::<><><>0<>0<><>::uid://b5hqpjanmnkle::::res://scenes/title_scene.gd<>uid://dahnwnop464c3::::res://assets/media/white.png

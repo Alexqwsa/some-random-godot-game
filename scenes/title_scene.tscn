@@ -12,7 +12,7 @@ offset_bottom = 648.0
 texture = ExtResource("1_faptf")
 expand_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=125486836]
+[node name="title" type="RichTextLabel" parent="." unique_id=125486836]
 offset_left = 178.0
 offset_top = 64.0
 offset_right = 991.0
