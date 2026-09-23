@@ -1,26 +1,146 @@
-[gd_scene format=3 uid="uid://ckx4moiy4oda4"]
+[gd_scene format=3 uid="uid://b43scgk5ctifu"]
 
-[ext_resource type="Script" uid="uid://dxvv48e8425q5" path="res://scenes/minigame.gd" id="1_lmjug"]
-[ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="2_v5ebm"]
-[ext_resource type="FontFile" uid="uid://c6g0q2ssmx6h6" path="res://assets/fonts/MS-UIGothic.ttf" id="3_fa05o"]
+[ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="1_tk6fs"]
+[ext_resource type="Texture2D" uid="uid://d0si5f5dngeyo" path="res://assets/media/chairitookfromgooglesearch.jpg" id="2_lmjug"]
+[ext_resource type="PackedScene" uid="uid://dsirinciu5h1k" path="res://scenes/player.tscn" id="2_og05i"]
 
-[node name="Node2D" type="Node2D" unique_id=1645418159]
-script = ExtResource("1_lmjug")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gko6d"]
+size = Vector2(37.89202, 58.29564)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=719418124]
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("2_v5ebm")
+[sub_resource type="Animation" id="Animation_v5ebm"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.2617994, -0.43633232, 0.43633232]
+}
+
+[sub_resource type="Animation" id="Animation_fa05o"]
+resource_name = "skew or something"
+length = 2.0
+step = 0.06666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.2617994, 0.0, -0.2617994, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1cg4"]
+_data = {
+&"RESET": SubResource("Animation_v5ebm"),
+&"skew or something": SubResource("Animation_fa05o")
+}
+
+[node name="Node2D" type="Node2D" unique_id=2129042148]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1470878923]
+repeat_size = Vector2(1000, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=437780510]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.800198, 16.201185)
+texture = ExtResource("1_tk6fs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1059592849]
+position = Vector2(0, 608)
+scale = Vector2(28.79527, 1)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=133888378]
+offset_left = -1.8058522
+offset_right = 38.19415
+offset_bottom = 40.0
+scale = Vector2(1.0861253, 1.88)
+color = Color(0, 0.91821504, 0.63875675, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=805320712]
+position = Vector2(19.79492, 36)
+scale = Vector2(1.1431738, -1.0978512)
+shape = SubResource("RectangleShape2D_gko6d")
+
+[node name="platform1" type="StaticBody2D" parent="." unique_id=162126008]
+position = Vector2(-237, 162)
+rotation = 0.35642868
+scale = Vector2(20.934233, 0.55601394)
+
+[node name="ColorRect" type="ColorRect" parent="platform1" unique_id=379554894]
+offset_left = 10.435499
+offset_top = -177.0833
+offset_right = 50.4355
+offset_bottom = -143.57268
+scale = Vector2(1.0861253, 1.88)
+color = Color(0, 0.91821504, 0.63875675, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform1" unique_id=1765885355]
+position = Vector2(31.749514, -147.1665)
+scale = Vector2(1.1431738, -1.0978504)
+shape = SubResource("RectangleShape2D_gko6d")
+
+[node name="platform2" type="StaticBody2D" parent="." unique_id=240854467]
+position = Vector2(428.99997, 233.99995)
+rotation = -0.067137614
+scale = Vector2(5.54379, 0.28888065)
+
+[node name="ColorRect" type="ColorRect" parent="platform2" unique_id=1908934475]
+offset_left = 10.435499
+offset_top = -177.0833
+offset_right = 50.4355
+offset_bottom = -143.57268
+scale = Vector2(1.0861253, 1.88)
+color = Color(0, 0.91821504, 0.63875675, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=569543914]
+position = Vector2(31.749514, -147.1665)
+scale = Vector2(1.1431738, -1.0978504)
+shape = SubResource("RectangleShape2D_gko6d")
+
+[node name="platform3" type="StaticBody2D" parent="." unique_id=2091060836]
+position = Vector2(712, 227.99997)
+rotation = 0.26715636
+scale = Vector2(5.54379, 0.28888065)
+
+[node name="ColorRect" type="ColorRect" parent="platform3" unique_id=1372801404]
+offset_left = 10.435499
+offset_top = -177.0833
+offset_right = 50.4355
+offset_bottom = -143.57268
+scale = Vector2(1.0861253, 1.88)
+color = Color(0, 0.91821504, 0.63875675, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform3" unique_id=2029801711]
+position = Vector2(31.749514, -147.1665)
+scale = Vector2(1.1431738, -1.0978504)
+shape = SubResource("RectangleShape2D_gko6d")
+
+[node name="chair" type="Node2D" parent="." unique_id=330210328]
+position = Vector2(1021, 523)
+skew = 0.2617994
+
+[node name="TextureRect" type="TextureRect" parent="chair" unique_id=1203913036]
+offset_right = 74.0
+offset_bottom = 56.0
+texture = ExtResource("2_lmjug")
 expand_mode = 1
 
-[node name="timer" type="RichTextLabel" parent="." unique_id=1050785458]
-offset_top = 595.0
-offset_right = 51.0
-offset_bottom = 638.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_fa05o")
-theme_override_font_sizes/normal_font_size = 42
-bbcode_enabled = true
-text = "1.0"
-fit_content = true
-autowrap_mode = 0
+[node name="animation" type="AnimationPlayer" parent="chair" unique_id=1691870122]
+libraries/ = SubResource("AnimationLibrary_j1cg4")
+
+[node name="Player" parent="." unique_id=1904546593 instance=ExtResource("2_og05i")]
+position = Vector2(63, 554.00006)
+scale = Vector2(0.19760835, 0.20000245)
