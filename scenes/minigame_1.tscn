@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://b43scgk5ctifu"]
 
+[ext_resource type="Script" uid="uid://chjesthehsm3" path="res://scenes/minigame_1.gd" id="1_fa05o"]
 [ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="1_tk6fs"]
 [ext_resource type="Texture2D" uid="uid://d0si5f5dngeyo" path="res://assets/media/chairitookfromgooglesearch.jpg" id="2_lmjug"]
 [ext_resource type="PackedScene" uid="uid://dsirinciu5h1k" path="res://scenes/player.tscn" id="2_og05i"]
+[ext_resource type="Script" uid="uid://d1h1vwsshabxo" path="res://scenes/chair.gd" id="2_v5ebm"]
+[ext_resource type="PackedScene" uid="uid://cvd4mnrcpquqg" path="res://scenes/timer.tscn" id="6_j1cg4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gko6d"]
 size = Vector2(37.89202, 58.29564)
@@ -12,7 +15,7 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:skew")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1),
@@ -24,18 +27,19 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_fa05o"]
 resource_name = "skew or something"
 length = 2.0
+loop_mode = 1
 step = 0.06666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:skew")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.2617994, 0.0, -0.2617994, 0.0]
+"values": [0.2617994, 0.0, -0.2617994, 0.0, 0.2617994]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j1cg4"]
@@ -44,7 +48,11 @@ _data = {
 &"skew or something": SubResource("Animation_fa05o")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gko6d"]
+radius = 35.133698
+
 [node name="Node2D" type="Node2D" unique_id=2129042148]
+script = ExtResource("1_fa05o")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1470878923]
 repeat_size = Vector2(1000, 0)
@@ -131,6 +139,10 @@ shape = SubResource("RectangleShape2D_gko6d")
 [node name="chair" type="Node2D" parent="." unique_id=330210328]
 position = Vector2(1021, 523)
 skew = 0.2617994
+script = ExtResource("2_v5ebm")
+
+[node name="animation" type="AnimationPlayer" parent="chair" unique_id=1691870122]
+libraries/ = SubResource("AnimationLibrary_j1cg4")
 
 [node name="TextureRect" type="TextureRect" parent="chair" unique_id=1203913036]
 offset_right = 74.0
@@ -138,9 +150,59 @@ offset_bottom = 56.0
 texture = ExtResource("2_lmjug")
 expand_mode = 1
 
-[node name="animation" type="AnimationPlayer" parent="chair" unique_id=1691870122]
+[node name="Area2D" type="Area2D" parent="chair" unique_id=740661716]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair/Area2D" unique_id=1629088271]
+position = Vector2(39.69873, 25.881905)
+shape = SubResource("CircleShape2D_gko6d")
+
+[node name="chair2" type="Node2D" parent="." unique_id=1288315029]
+position = Vector2(1035.9999, 74.00009)
+skew = 0.2617994
+script = ExtResource("2_v5ebm")
+
+[node name="TextureRect" type="TextureRect" parent="chair2" unique_id=1299779089]
+offset_right = 74.0
+offset_bottom = 56.0
+texture = ExtResource("2_lmjug")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="chair2" unique_id=776291346]
 libraries/ = SubResource("AnimationLibrary_j1cg4")
+
+[node name="Area2D" type="Area2D" parent="chair2" unique_id=1356515278]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair2/Area2D" unique_id=1970420992]
+position = Vector2(39.69873, 25.881905)
+shape = SubResource("CircleShape2D_gko6d")
+
+[node name="chair3" type="Node2D" parent="." unique_id=1308053303]
+position = Vector2(316.00012, 371.0001)
+scale = Vector2(0.99999994, 0.99999994)
+skew = 0.2617994
+script = ExtResource("2_v5ebm")
+
+[node name="TextureRect" type="TextureRect" parent="chair3" unique_id=441805725]
+offset_right = 74.0
+offset_bottom = 56.0
+texture = ExtResource("2_lmjug")
+expand_mode = 1
+
+[node name="animation" type="AnimationPlayer" parent="chair3" unique_id=1629263785]
+libraries/ = SubResource("AnimationLibrary_j1cg4")
+
+[node name="Area2D" type="Area2D" parent="chair3" unique_id=1521630167]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair3/Area2D" unique_id=1198497930]
+position = Vector2(39.69873, 25.881905)
+shape = SubResource("CircleShape2D_gko6d")
 
 [node name="Player" parent="." unique_id=1904546593 instance=ExtResource("2_og05i")]
 position = Vector2(63, 554.00006)
 scale = Vector2(0.19760835, 0.20000245)
+
+[node name="ThemedTimer" parent="." unique_id=1645418159 instance=ExtResource("6_j1cg4")]
+
+[connection signal="chair_collected" from="chair" to="." method="chair_collecteded"]
+[connection signal="chair_collected" from="chair2" to="." method="chair_collecteded"]
+[connection signal="chair_collected" from="chair3" to="." method="chair_collecteded"]

@@ -1,3 +1,70 @@
 [gd_scene format=3 uid="uid://ors3b33mb7ih"]
 
+[ext_resource type="Script" uid="uid://ccu67p2gwrjoi" path="res://scenes/minigame_2.gd" id="1_dqa6p"]
+[ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="2_c3ytc"]
+[ext_resource type="Texture2D" uid="uid://d0si5f5dngeyo" path="res://assets/media/chairitookfromgooglesearch.jpg" id="3_eachr"]
+[ext_resource type="Script" uid="uid://tedwgsgh5mjt" path="res://scenes/button.gd" id="4_6tcq3"]
+[ext_resource type="PackedScene" uid="uid://cvd4mnrcpquqg" path="res://scenes/timer.tscn" id="5_6co8m"]
+
 [node name="Node2D" type="Node2D" unique_id=102635368]
+script = ExtResource("1_dqa6p")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=152665474]
+repeat_size = Vector2(1000, 0)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax2D" unique_id=764732181]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.800198, 16.201185)
+texture = ExtResource("2_c3ytc")
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=1530955892]
+offset_left = 190.0
+offset_top = 96.0
+offset_right = 1858.0
+offset_bottom = 2144.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_2" type="TextureButton" parent="." unique_id=1151463847]
+offset_left = 580.0
+offset_top = 8.0
+offset_right = 2248.0
+offset_bottom = 2056.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1711876494]
+offset_left = 238.0
+offset_top = 490.0
+offset_right = 1906.0
+offset_bottom = 2538.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1925650010]
+offset_left = 899.0
+offset_top = 251.0
+offset_right = 2567.0
+offset_bottom = 2299.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="ThemedTimer" parent="." unique_id=1645418159 instance=ExtResource("5_6co8m")]
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]

@@ -9,15 +9,17 @@ radius = 10.034978
 [node name="Player" type="CharacterBody2D" unique_id=1904546593]
 script = ExtResource("1_g2els")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1384856156]
-texture = ExtResource("1_3vyb7")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1936387872]
 scale = Vector2(28.800003, 27.839996)
 shape = SubResource("CircleShape2D_gko6d")
 
-[node name="Area2D" type="Area2D" parent="CollisionShape2D" unique_id=1002194825]
+[node name="Area2D" type="Area2D" parent="." unique_id=1056381208]
+scale = Vector2(28.8, 27.839993)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D/Area2D" unique_id=919333604]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1281620397]
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CircleShape2D_gko6d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1384856156]
+scale = Vector2(0.034722224, 0.03591955)
+texture = ExtResource("1_3vyb7")
