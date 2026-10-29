@@ -51,8 +51,7 @@ offset_top = 456.0
 offset_right = 579.00006
 offset_bottom = 500.0
 scale = Vector2(1.4337229, 1.1552944)
-theme_override_constants/outline_size = 26
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 5
 text = "quit"
 
 [connection signal="pressed" from="VBoxContainer/play_button" to="." method="_on_play_button_pressed"]

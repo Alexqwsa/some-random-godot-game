@@ -1,3 +1,38 @@
 [gd_scene format=3 uid="uid://ckqe3v7dije8g"]
 
-[node name="WinningScreen" type="Node2D" unique_id=67354983]
+[ext_resource type="Environment" uid="uid://btnpdoyyor63h" path="res://other stuff/stuff.tres" id="1_umdnf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gko6d"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gko6d"]
+size = Vector3(60, 2, 60)
+
+[node name="Node3D" type="Node3D" unique_id=1136020131]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090098411]
+environment = ExtResource("1_umdnf")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1665009220]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5829897, 24.360607)
+environment = ExtResource("1_umdnf")
+fov = 123.51637
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2058225328]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1356657876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_gko6d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=673153798]
+mesh = SubResource("BoxMesh_gko6d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="StaticBody3D" unique_id=1112754069]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="StaticBody3D/CanvasLayer" unique_id=1256445319]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 520.0
+offset_bottom = 183.0
+theme_override_font_sizes/normal_font_size = 120
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=6.0 connected=1]Y ou win"
