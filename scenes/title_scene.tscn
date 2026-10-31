@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5hqpjanmnkle" path="res://scenes/title_scene.gd" id="1_4k7ef"]
 [ext_resource type="Texture2D" uid="uid://dahnwnop464c3" path="res://assets/media/white.png" id="1_faptf"]
+[ext_resource type="PackedScene" uid="uid://bgvf5wely1apq" path="res://scenes/settings_tab.tscn" id="3_4k7ef"]
 
 [node name="Node2D" type="Node2D" unique_id=428658692]
 script = ExtResource("1_4k7ef")
@@ -53,6 +54,10 @@ offset_bottom = 500.0
 scale = Vector2(1.4337229, 1.1552944)
 theme_override_font_sizes/font_size = 5
 text = "quit"
+
+[node name="settoing" parent="." unique_id=1629868147 instance=ExtResource("3_4k7ef")]
+unique_name_in_owner = true
+visible = false
 
 [connection signal="pressed" from="VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/settoing" to="." method="_on_settoing_pressed"]

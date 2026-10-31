@@ -11,6 +11,7 @@
 size = Vector2(37.89202, 58.29564)
 
 [sub_resource type="Animation" id="Animation_v5ebm"]
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -138,11 +139,12 @@ shape = SubResource("RectangleShape2D_gko6d")
 
 [node name="chair" type="Node2D" parent="." unique_id=330210328]
 position = Vector2(1021, 523)
-skew = 0.2617994
+skew = 0.43633232
 script = ExtResource("2_v5ebm")
 
 [node name="animation" type="AnimationPlayer" parent="chair" unique_id=1691870122]
 libraries/ = SubResource("AnimationLibrary_j1cg4")
+autoplay = &"skew or something"
 
 [node name="TextureRect" type="TextureRect" parent="chair" unique_id=1203913036]
 offset_right = 74.0
@@ -158,7 +160,7 @@ shape = SubResource("CircleShape2D_gko6d")
 
 [node name="chair2" type="Node2D" parent="." unique_id=1288315029]
 position = Vector2(1035.9999, 74.00009)
-skew = 0.2617994
+skew = 0.43633232
 script = ExtResource("2_v5ebm")
 
 [node name="TextureRect" type="TextureRect" parent="chair2" unique_id=1299779089]
@@ -169,6 +171,7 @@ expand_mode = 1
 
 [node name="animation" type="AnimationPlayer" parent="chair2" unique_id=776291346]
 libraries/ = SubResource("AnimationLibrary_j1cg4")
+autoplay = &"skew or something"
 
 [node name="Area2D" type="Area2D" parent="chair2" unique_id=1356515278]
 
@@ -179,7 +182,7 @@ shape = SubResource("CircleShape2D_gko6d")
 [node name="chair3" type="Node2D" parent="." unique_id=1308053303]
 position = Vector2(316.00012, 371.0001)
 scale = Vector2(0.99999994, 0.99999994)
-skew = 0.2617994
+skew = 0.43633232
 script = ExtResource("2_v5ebm")
 
 [node name="TextureRect" type="TextureRect" parent="chair3" unique_id=441805725]
@@ -190,6 +193,7 @@ expand_mode = 1
 
 [node name="animation" type="AnimationPlayer" parent="chair3" unique_id=1629263785]
 libraries/ = SubResource("AnimationLibrary_j1cg4")
+autoplay = &"skew or something"
 
 [node name="Area2D" type="Area2D" parent="chair3" unique_id=1521630167]
 

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bgvf5wely1apq"]
+
+[node name="settings tab" type="Control" unique_id=1629868147]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=59674420]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 51.0
+offset_right = 1097.0
+offset_bottom = 592.0
+current_tab = 0
+
+[node name="settoing" type="TabBar" parent="TabContainer" unique_id=96076156]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Panel2" type="Panel" parent="TabContainer/settoing" unique_id=418373782]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 510.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/settoing" unique_id=1062769214]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 68.0
+offset_transform_enabled = true
+theme_override_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/settoing/HBoxContainer" unique_id=1094245458]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(30, 0)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 35
+text = "music"
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/settoing/HBoxContainer" unique_id=2086013805]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="TabContainer/settoing" unique_id=1138738012]
+layout_mode = 0
+offset_right = 312.0
+offset_bottom = 510.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/settoing" unique_id=1686694207]
+layout_mode = 0
+offset_top = 276.00003
+offset_right = 318.28033
+offset_bottom = 363.92075
+rotation = -0.5483777
+theme_override_colors/default_color = Color(0.9098039, 0.8745098, 0.19215687, 1)
+theme_override_font_sizes/normal_font_size = 59
+text = "unfinished"

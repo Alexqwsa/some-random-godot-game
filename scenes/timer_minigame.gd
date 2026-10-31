@@ -20,7 +20,16 @@ func Timer(start_time: float): # making a new function for timer countdown!
 	while time > 0.0: # run if timer hasnt reached 0
 		await wait(0.10)
 		time = time - 0.10
-	
+		
+		#match time:
+		#	if 0.03:
+		#		timer.push_color("yellow")
+		#	if 0.02:
+		#		timer.text.color("orange")
+		#	if 0.01:
+		#		timer.text.color("red")
+		
+
 	#when timer reaches 0
 	return
 	
