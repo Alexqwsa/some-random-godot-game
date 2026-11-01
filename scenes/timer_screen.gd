@@ -19,6 +19,7 @@ func _ready() -> void:
 		
 	else:
 		Global.minigames_done = 0
+		Global.lives = 5
 		get_tree().change_scene_to_file("res://scenes/winning_screen.tscn")
 
 func _process(delta: float) -> void:
