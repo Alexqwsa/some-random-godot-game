@@ -13,12 +13,13 @@ var time
 func _ready() -> void:
 	await Timer(5.0)
 	
-	if Global.minigames_done < 3:
+	if Global.minigames_done < 2:
 		Global.minigames_done = Global.minigames_done +1
 		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
 		
 	else:
-		get_tree().change_scene_to_file("res://scenes/title_scene.tscn")
+		Global.minigames_done = 0
+		get_tree().change_scene_to_file("res://scenes/winning_screen.tscn")
 
 func _process(delta: float) -> void:
 	match Global.lives:

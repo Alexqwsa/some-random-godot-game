@@ -1,8 +1,6 @@
-res://scenes/timer_minigame.gd
+res://scenes/winning_screen.tscn
 res://other stuff/stuff.tres
-res://scenes/settings_tab.tscn
-res://scenes/title_scene.tscn
-res://scenes/title_scene.gd
-res://scenes/minigame_1.tscn
-res://scenes/timer.tscn
-res://scenes/chair.gd
+res://scenes/win_screen.gd
+res://scenes/minigame_2.tscn
+res://scenes/minigame_2.gd
+res://scenes/timer_screen.gd

@@ -8,6 +8,7 @@
 
 [node name="Node2D" type="Node2D" unique_id=102635368]
 script = ExtResource("1_dqa6p")
+metadata/_edit_vertical_guides_ = [-208.0]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=152665474]
 repeat_size = Vector2(1000, 0)
@@ -19,10 +20,10 @@ scale = Vector2(28.800198, 16.201185)
 texture = ExtResource("2_c3ytc")
 
 [node name="Button_1" type="TextureButton" parent="." unique_id=1530955892]
-offset_left = 190.0
-offset_top = 96.0
-offset_right = 1858.0
-offset_bottom = 2144.0
+offset_left = 202.0
+offset_top = 223.0
+offset_right = 1870.0
+offset_bottom = 2271.0
 scale = Vector2(0.0916142, 0.072169535)
 texture_normal = ExtResource("3_eachr")
 ignore_texture_size = true
@@ -30,10 +31,10 @@ stretch_mode = 1
 script = ExtResource("4_6tcq3")
 
 [node name="Button_2" type="TextureButton" parent="." unique_id=1151463847]
-offset_left = 580.0
-offset_top = 8.0
-offset_right = 2248.0
-offset_bottom = 2056.0
+offset_left = 618.0
+offset_top = 146.0
+offset_right = 2286.0
+offset_bottom = 2194.0
 scale = Vector2(0.0916142, 0.072169535)
 texture_normal = ExtResource("3_eachr")
 ignore_texture_size = true
@@ -41,10 +42,10 @@ stretch_mode = 1
 script = ExtResource("4_6tcq3")
 
 [node name="Button_3" type="TextureButton" parent="." unique_id=1711876494]
-offset_left = 238.0
-offset_top = 490.0
-offset_right = 1906.0
-offset_bottom = 2538.0
+offset_left = 352.0
+offset_top = 346.0
+offset_right = 2020.0
+offset_bottom = 2394.0
 scale = Vector2(0.0916142, 0.072169535)
 texture_normal = ExtResource("3_eachr")
 ignore_texture_size = true
@@ -52,10 +53,64 @@ stretch_mode = 1
 script = ExtResource("4_6tcq3")
 
 [node name="Button_4" type="TextureButton" parent="." unique_id=1925650010]
-offset_left = 899.0
-offset_top = 251.0
-offset_right = 2567.0
-offset_bottom = 2299.0
+offset_left = 993.00006
+offset_top = 9.0
+offset_right = 2661.0
+offset_bottom = 2057.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_5" type="TextureButton" parent="." unique_id=1130960027]
+offset_left = 930.0
+offset_top = 308.0
+offset_right = 2598.0
+offset_bottom = 2356.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_6" type="TextureButton" parent="." unique_id=2024612330]
+offset_left = 676.0
+offset_top = 429.0
+offset_right = 2344.0
+offset_bottom = 2477.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_7" type="TextureButton" parent="." unique_id=39944912]
+offset_left = 26.0
+offset_top = 40.0
+offset_right = 1694.0
+offset_bottom = 2088.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_8" type="TextureButton" parent="." unique_id=1490309162]
+offset_top = 496.0
+offset_right = 1668.0
+offset_bottom = 2544.0
+scale = Vector2(0.0916142, 0.072169535)
+texture_normal = ExtResource("3_eachr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("4_6tcq3")
+
+[node name="Button_9" type="TextureButton" parent="." unique_id=1523273251]
+offset_left = 391.0
+offset_top = -20.0
+offset_right = 2059.0
+offset_bottom = 2028.0
 scale = Vector2(0.0916142, 0.072169535)
 texture_normal = ExtResource("3_eachr")
 ignore_texture_size = true
@@ -68,3 +123,8 @@ script = ExtResource("4_6tcq3")
 [connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
 [connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
 [connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]
+[connection signal="pressed" from="Button_5" to="Button_5" method="_on_pressed"]
+[connection signal="pressed" from="Button_6" to="Button_6" method="_on_pressed"]
+[connection signal="pressed" from="Button_7" to="Button_7" method="_on_pressed"]
+[connection signal="pressed" from="Button_8" to="Button_8" method="_on_pressed"]
+[connection signal="pressed" from="Button_9" to="Button_9" method="_on_pressed"]

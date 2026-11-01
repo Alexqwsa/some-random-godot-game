@@ -1,13 +1,22 @@
 [gd_scene format=3 uid="uid://ckqe3v7dije8g"]
 
 [ext_resource type="Environment" uid="uid://btnpdoyyor63h" path="res://other stuff/stuff.tres" id="1_umdnf"]
+[ext_resource type="Script" uid="uid://do6cd1diorjs1" path="res://scenes/win_screen.gd" id="1_xtqdr"]
+[ext_resource type="Texture2D" uid="uid://p7cts42vwhsi" path="res://assets/media/canny.png" id="2_pyq4r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gko6d"]
+size = Vector3(60.012535, 2.0262146, 60.00524)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gko6d"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtqdr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_p3tqn"]
+radius = 3.5647113
+
 [node name="Node3D" type="Node3D" unique_id=1136020131]
+script = ExtResource("1_xtqdr")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2090098411]
 environment = ExtResource("1_umdnf")
@@ -20,7 +29,7 @@ fov = 123.51637
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2058225328]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1356657876]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010051727, 0.007095337, -0.018100739)
 shape = SubResource("BoxShape3D_gko6d")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=673153798]
@@ -36,3 +45,417 @@ offset_bottom = 183.0
 theme_override_font_sizes/normal_font_size = 120
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=6.0 connected=1]Y ou win"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="StaticBody3D/CanvasLayer" unique_id=474414734]
+offset_left = 775.0
+offset_top = 492.0
+offset_right = 1116.0
+offset_bottom = 612.0
+theme_override_font_sizes/normal_font_size = 67
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=2.0 connected=1]ok"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="StaticBody3D/CanvasLayer/RichTextLabel2" unique_id=1785687929]
+layout_mode = 0
+offset_right = 340.0
+offset_bottom = 118.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xtqdr")
+
+[node name="Label" type="Label" parent="StaticBody3D/CanvasLayer" unique_id=1983147879]
+offset_left = 535.0
+offset_top = 127.0
+offset_right = 1120.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 20
+text = "(for now since the game is still in work in progress)"
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1049613623]
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D" unique_id=361669161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1171992148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="." unique_id=71817847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 43.677383, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D2" unique_id=756431897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D2" unique_id=1058426476]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="." unique_id=1069424451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 43.677383, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D3" unique_id=2021986678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D3" unique_id=1710847660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D4" type="RigidBody3D" parent="." unique_id=847362307]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 43.677383, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D4" unique_id=1433885472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D4" unique_id=218664153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D5" type="RigidBody3D" parent="." unique_id=826122819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 43.677383, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D5" unique_id=1218591848]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D5" unique_id=343227159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D6" type="RigidBody3D" parent="." unique_id=1836720499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 43.677383, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D6" unique_id=1893217926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D6" unique_id=660039178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D7" type="RigidBody3D" parent="." unique_id=1949440992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 43.677383, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D7" unique_id=440006218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D7" unique_id=103925711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D8" type="RigidBody3D" parent="." unique_id=1216817522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 43.677383, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D8" unique_id=780423034]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D8" unique_id=1928183426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D9" type="RigidBody3D" parent="." unique_id=1938072689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 43.677383, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D9" unique_id=759913936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D9" unique_id=794351496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D10" type="RigidBody3D" parent="." unique_id=1816006462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 43.677383, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D10" unique_id=615686392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D10" unique_id=751326035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D11" type="RigidBody3D" parent="." unique_id=198425304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52.919342, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D11" unique_id=73004835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D11" unique_id=1336632327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D12" type="RigidBody3D" parent="." unique_id=390624342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52.919342, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D12" unique_id=470202021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D12" unique_id=1292943642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D13" type="RigidBody3D" parent="." unique_id=1190298474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52.919342, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D13" unique_id=1882376232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D13" unique_id=161371184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D14" type="RigidBody3D" parent="." unique_id=143223128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 52.919342, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D14" unique_id=861450403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D14" unique_id=1448777253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D15" type="RigidBody3D" parent="." unique_id=1541525977]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 52.919342, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D15" unique_id=81581491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D15" unique_id=1748287158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D16" type="RigidBody3D" parent="." unique_id=1774021141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 52.919342, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D16" unique_id=919182525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D16" unique_id=2058957284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D17" type="RigidBody3D" parent="." unique_id=452972973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 52.919342, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D17" unique_id=2030790227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D17" unique_id=1633467603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D18" type="RigidBody3D" parent="." unique_id=601677674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 52.919342, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D18" unique_id=1611548636]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D18" unique_id=589498964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D19" type="RigidBody3D" parent="." unique_id=164811159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 52.919342, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D19" unique_id=1702525952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D19" unique_id=691152401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D20" type="RigidBody3D" parent="." unique_id=1148685790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 61.871937, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D20" unique_id=1136517982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D20" unique_id=2117895621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D21" type="RigidBody3D" parent="." unique_id=734102673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 61.871937, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D21" unique_id=1763172591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D21" unique_id=2059368107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D22" type="RigidBody3D" parent="." unique_id=1853425370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 61.871937, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D22" unique_id=1687727304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D22" unique_id=2025175534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D23" type="RigidBody3D" parent="." unique_id=155307136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 61.871937, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D23" unique_id=1617788017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D23" unique_id=1935710628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D24" type="RigidBody3D" parent="." unique_id=1103313645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 61.871937, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D24" unique_id=19144722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D24" unique_id=1846833366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D25" type="RigidBody3D" parent="." unique_id=164326604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0403805, 61.871937, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D25" unique_id=2031246159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D25" unique_id=1621493346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D26" type="RigidBody3D" parent="." unique_id=1389661800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 61.871937, 0)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D26" unique_id=1870630041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D26" unique_id=897533793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D27" type="RigidBody3D" parent="." unique_id=607459141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 61.871937, 7.990675)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D27" unique_id=1766122552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D27" unique_id=141079006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D28" type="RigidBody3D" parent="." unique_id=1452550080]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.256884, 61.871937, -7.33543)
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D28" unique_id=860364237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D28" unique_id=1081079574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D29" type="RigidBody3D" parent="." unique_id=913963288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.478959, 68.46925, -4.054464)
+mass = 2.019
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D29" unique_id=1494385312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D29" unique_id=731642958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D30" type="RigidBody3D" parent="." unique_id=921464462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7510505, 68.46925, -4.054464)
+mass = 2.019
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D30" unique_id=1280281133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D30" unique_id=411068771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D31" type="RigidBody3D" parent="." unique_id=1225908235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8306603, 69.88652, 4.4710894)
+mass = 2.019
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D31" unique_id=977657410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D31" unique_id=543391828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[node name="RigidBody3D32" type="RigidBody3D" parent="." unique_id=1832160810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.663229, 69.88652, 4.4710894)
+mass = 2.019
+can_sleep = false
+
+[node name="Sprite3D" type="Sprite3D" parent="RigidBody3D32" unique_id=68999563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3424654, 0)
+texture = ExtResource("2_pyq4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D32" unique_id=1933493581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.337239, 0)
+shape = SubResource("SphereShape3D_p3tqn")
+
+[connection signal="pressed" from="StaticBody3D/CanvasLayer/RichTextLabel2/Button" to="." method="_on_button_pressed"]
